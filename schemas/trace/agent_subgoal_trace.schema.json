@@ -1,0 +1,67 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AgentSubgoalTrace",
+    "type": "object",
+    "required": [
+        "tool",
+        "start_time",
+        "end_time",
+        "duration",
+        "recovered",
+        "retries"
+    ],
+    "properties": {
+        "tool": {
+            "type": "string",
+            "description": "The name of the tool used during this subgoal step."
+        },
+        "start_time": {
+            "type": "number",
+            "description": "Timestamp marking the start of subgoal execution (epoch seconds)."
+        },
+        "end_time": {
+            "type": "number",
+            "description": "Timestamp marking the end of subgoal execution (epoch seconds)."
+        },
+        "duration": {
+            "type": "number",
+            "description": "Execution duration in seconds."
+        },
+        "recovered": {
+            "type": "boolean",
+            "description": "True if the step was recovered after a failure."
+        },
+        "retries": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Number of retry attempts before success or failure."
+        },
+        "last_error": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "Error message from last failure, if any."
+        },
+        "notes": {
+            "type": "string",
+            "description": "Enhanced trace annotation for debugging and analysis."
+        },
+        "output": {
+            "type": "string",
+            "description": "Output result from the tool execution."
+        },
+        "tags": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Tags for categorizing and filtering traces."
+        },
+        "failure_reason": {
+            "type": "string",
+            "description": "Reason for failure when recovery attempts are exhausted."
+        }
+    },
+    "additionalProperties": false
+}

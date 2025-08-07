@@ -1,0 +1,143 @@
+[project]
+name = "ai-agents-reality-check"
+version = "0.1.0"
+description = "Revealing the high failure rate of AI agents with empirical benchmarks, statistical analysis, and real-world citations."
+authors = [{name = "Jesse Moses (@Cre4T3Tiv3)", email = "jesse@bytestacklabs.com"}]
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.11"
+keywords = ["ai", "agents", "benchmark", "machine-learning", "reality-check"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Testing",
+]
+
+dependencies = [
+    "matplotlib>=3.5.0",
+    "numpy>=1.21.0",
+    "pandas>=1.3.0",
+    "seaborn>=0.11.0",
+    "rich>=10.0.0",
+    "typer>=0.9.0",
+    "markdown",
+    "scipy>=1.7.0",
+    "jsonschema>=4.21.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=22.0.0",
+    "mypy>=1.0.0",
+    "pandas-stubs",
+    "types-Markdown>=3.0.0",
+    "types-seaborn",
+    "ruff>=0.4.0",
+    "jsonschema>=4.21.1",
+    "scikit-learn>=1.0.0",
+    "plotly>=5.0.0",
+    "dash>=2.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Cre4T3Tiv3/ai-agents-reality-check"
+Repository = "https://github.com/Cre4T3Tiv3/ai-agents-reality-check"
+Issues = "https://github.com/Cre4T3Tiv3/ai-agents-reality-check/issues"
+Documentation = "https://github.com/Cre4T3Tiv3/ai-agents-reality-check#readme"
+
+[project.scripts]
+agent-benchmark = "ai_agents_reality_check.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.black]
+line-length = 88
+target-version = ['py311', 'py312']
+
+[tool.mypy]
+ignore_missing_imports = true
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "-v",
+    "--tb=short",
+    "--strict-markers",
+    "--disable-warnings",
+    "--color=yes"
+]
+asyncio_mode = "auto"
+markers = [
+    "unit: Unit tests for individual components",
+    "functional: Functional tests for end-to-end workflows", 
+    "integration: Integration tests with external dependencies",
+    "slow: Tests that take more than 10 seconds",
+    "benchmark: Benchmark execution tests"
+]
+
+
+# Add test coverage configuration
+[tool.coverage.run]
+source = ["ai_agents_reality_check"]
+omit = [
+    "tests/*",
+    "*/conftest.py",
+    "*/__init__.py"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError"
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+src = ["ai_agents_reality_check", "tests"]
+exclude = ["__pypackages__", "venv", ".venv", "build", "dist"]
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "F",  # pyflakes
+    "I",  # isort
+    "N",  # pep8-naming
+    "UP", # pyupgrade
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "PL", # pylint
+    "SIM", # flake8-simplify
+]
+ignore = [
+    "E501",   # line too long (handled by formatter)
+    "PLR0913", # too many arguments
+    "PLR0915", # too many statements
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["PLR2004"]  # magic value comparison in tests is OK
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
