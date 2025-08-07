@@ -1862,7 +1862,7 @@ class AgentBenchmark:
             elif format.lower() == "json":
                 if not self.results_history:
                     self.logger.warning("No results history to export")
-                    results_data = {
+                    results_data: dict[str, Any] = {
                         "metadata": {
                             "version": "0.1.0",
                             "total_results": 0,
