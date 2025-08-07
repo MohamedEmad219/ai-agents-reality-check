@@ -182,11 +182,6 @@ make run-ensemble
 make run-network-test
 ```
 
-<p align="center">
-  <img src="docs/assets/screenshots/make_run_enhanced_output.png" alt="Enhanced Stress Testing Output" width="800"/>
-  <br><em>Enhanced benchmark showing Real agents maintain 75% success under tool failures and network stress</em>
-</p>
-
 ---
 
 ## Complete Command Reference
@@ -320,17 +315,7 @@ make analyze-results                 # Auto-detects enhanced_results.json
 make analyze-results FILE=logs/enhanced_results.json
 ```
 
-<p align="center">
-  <img src="docs/assets/screenshots/make_analyze_results_output.png" alt="Statistical Analysis Output" width="800"/>
-  <br><em>Statistical credibility: Cohen's h effect sizes, confidence intervals, and mathematical validation</em>
-</p>
-
 ### Interpreting Key Metrics
-
-<p align="center">
-  <img src="docs/assets/screenshots/results_interpretation.png" alt="Results Interpretation Guide" width="800"/>
-  <br><em>Guide to understanding benchmark metrics and statistical significance</em>
-</p>
 
 **Success Rate**: Percentage of tasks completed successfully
 - **Real Agent**: Typically 75-93% across all conditions
