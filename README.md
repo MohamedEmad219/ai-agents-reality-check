@@ -126,7 +126,7 @@ We tested all major ensemble patterns with rigorous statistical analysis. The re
   <br><em>Every single ensemble pattern performs worse than individual Real Agents</em>
 </p>
 
-**The Multi-Agent Myth Exposed:**
+**The Multi-Agent Paradigm**
 
 ```bash
 Pipeline:        0.0% success (complete failure)
