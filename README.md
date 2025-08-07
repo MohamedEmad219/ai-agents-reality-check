@@ -161,11 +161,6 @@ make install
 make run
 ```
 
-<p align="center">
-  <img src="docs/assets/screenshots/make_run_output.png" alt="Make Run Command Output" width="800"/>
-  <br><em>The reality check moment: 73-point performance gap exposed with mathematical rigor</em>
-</p>
-
 ### Explore Advanced Features
 
 ```bash
