@@ -97,7 +97,7 @@ Under unstable network conditions:
 
 | Agent Type | Success Rate | Avg Time | Resilience Factor |
 |------------|-------------|----------|------------------|
-| **Wrapper Agent** | **15.6%** | 2.39s | **0.59** (almost 9x worse) |
+| **Wrapper Agent** | **15.6%** | 2.40s | **0.59** (almost 9x worse) |
 | **Marketing Agent** | **44.4%** | 1.47s | 1.71 |
 | **Real Agent** | **84.4%** | 0.64s | **5.17** |
 
@@ -134,10 +134,10 @@ We tested all major ensemble patterns with rigorous statistical analysis. The re
 
 # What actually happens:
 Pipeline:        0.0% success (complete failure)
-Parallel:       -77.8% ensemble advantage  
-Hierarchical:   +0.0% ensemble advantage
-Consensus:      -55.6% ensemble advantage
-Specialization: -66.7% ensemble advantage
+Parallel:       22.2% success (-69.0% ensemble advantage)  
+Hierarchical:   22.2% success (+0.0% ensemble advantage)
+Consensus:      22.2% success (-55.6% ensemble advantage)
+Specialization: 22.2% success (-66.7% ensemble advantage)
 ```
 
 ---
