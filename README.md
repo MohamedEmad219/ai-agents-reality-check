@@ -129,10 +129,6 @@ We tested all major ensemble patterns with rigorous statistical analysis. The re
 **The Multi-Agent Myth Exposed:**
 
 ```bash
-# What the industry claims:
-"Agent swarms amplify intelligence through collaboration"
-
-# What actually happens:
 Pipeline:        0.0% success (complete failure)
 Parallel:       22.2% success (-69.0% ensemble advantage)  
 Hierarchical:   22.2% success (+0.0% ensemble advantage)
